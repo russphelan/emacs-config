@@ -16,6 +16,7 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
+<<<<<<< HEAD
 
 (defvar my-packages '(color-theme-solarized)
   "A list of packages to ensure are installed at launch.")
@@ -40,3 +41,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+=======
+>>>>>>> origin/master
