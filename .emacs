@@ -7,3 +7,6 @@
   (progn
       (menu-bar-mode -1)))
 
+;; custom faces (fonts)
+(set-face-attribute 'default nil :font "Anonymous Pro 12")
+
