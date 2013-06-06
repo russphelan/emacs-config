@@ -24,3 +24,19 @@
     (when (not (package-installed-p p))
       (package-install p)))
 
+;; custom theme management
+(load-theme 'solarized-dark t)
+
+;; variables and faces that were custom set in emacs
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-startup-indented t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
