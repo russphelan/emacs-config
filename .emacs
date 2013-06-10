@@ -1,5 +1,4 @@
-;; window-system switch. run commands depending on whether emacs is in
-;; GUI mode or terminal mode.
+;------window system switch------;
 (if window-system
   (progn 
       (tool-bar-mode -1)
@@ -8,6 +7,7 @@
   (progn
       (menu-bar-mode -1)
       (set-fringe-mode 0)))
+;------end window system switch------;
 
 ;------custom keybinds------;
 (setq mac-command-modifier 'control)
@@ -41,12 +41,13 @@
 (load-theme 'solarized-dark t)
 ;------end custom theme management------;
 
-;; variables and faces that were custom set in emacs
+;variables and faces that were custom set in emacs
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-log-done (quote note))
  '(org-startup-indented t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -54,7 +55,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-date ((t (:foreground "#a57705" :underline t))))
- '(org-hide ((t (:foreground "#0a2832")))) ;face for hidden stars
+ '(org-hide ((t (:foreground "#0a2832"))))
  '(org-level-1 ((t (:foreground "#bd3612"))))
  '(org-level-2 ((t (:foreground "#259185"))))
  '(org-level-3 ((t (:foreground "#2075c7"))))
