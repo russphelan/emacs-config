@@ -9,11 +9,15 @@
       (menu-bar-mode -1)
       (set-fringe-mode 0)))
 
-;; custom faces (fonts)
+;------custom keybinds------;
+(setq mac-command-modifier 'control)
+;------end custom keybinds------;
+
+;------custom faces------;
 (set-face-attribute 'default nil :font "Anonymous Pro 12")
+;------end custom faces------;
 
-
-;;------package and repository management------
+;------package and repository management------;
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -26,12 +30,12 @@
 (dolist (p my-packages)
     (when (not (package-installed-p p))
       (package-install p)))
-;;------end package and repository management------
+;------end package and repository management------;
 
 
-;;------custom theme management------
+;------custom theme management------;
 (load-theme 'solarized-dark t)
-;;------end custom theme management------
+;------end custom theme management------;
 
 
 
