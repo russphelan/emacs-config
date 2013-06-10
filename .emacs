@@ -36,12 +36,11 @@
       (package-install p)))
 ;------end package and repository management------;
 
-
 ;------custom theme management------;
 (load-theme 'solarized-dark t)
 ;------end custom theme management------;
 
-;variables and faces that were custom set in emacs
+;------variables set by Customize------;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -57,11 +56,13 @@
  ;; If there is more than one, they won't work right.
  '(org-date ((t (:foreground "#a57705" :underline t))))
  '(org-hide ((t (:foreground "#073642"))))
+ '(org-special-keyword ((t (:foreground "#52676f"))))
+ '(org-todo ((t (:background "#c60007" :foreground "#042028" 
+			     :inverse-video t :underline nil 
+			     :slant normal :weight bold)))))
  '(org-level-1 ((t (:foreground "#bd3612"))))
  '(org-level-2 ((t (:foreground "#259185"))))
  '(org-level-3 ((t (:foreground "#2075c7"))))
  '(org-level-4 ((t (:foreground "#728a05"))))
- '(org-special-keyword ((t (:foreground "#52676f"))))
- '(org-todo ((t (:background "#c60007" :foreground "#042028" :inverse-video t :underline nil :slant normal :weight bold)))))
- ;red TODO keywords
+ ;------end variables set by Customize------;
 
