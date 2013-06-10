@@ -17,6 +17,10 @@
 (set-face-attribute 'default nil :font "Anonymous Pro 12")
 ;------end custom faces------;
 
+;------other custom-set variables------;
+(setq make-backup-files nil)
+;------end other custom-set variables------;
+
 ;------package and repository management------;
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
