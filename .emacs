@@ -48,6 +48,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-log-done (quote note))
+ '(org-src-fontify-natively t)
  '(org-startup-indented t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
