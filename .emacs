@@ -19,7 +19,7 @@
 ;------end custom faces------;
 
 ;------other custom-set variables------;
-(setq make-backup-files nil)
+(setq make-backup-files 'nil) ;keep emacs from generating backup files
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 ;------end other custom-set variables------;
 
@@ -44,27 +44,22 @@
 
 ;------variables set by Customize------;
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(org-log-done (quote note))
  '(org-src-fontify-natively t)
  '(org-startup-indented t))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(org-date ((t (:foreground "#a57705" :underline t))))
  '(org-hide ((t (:foreground "#073642"))))
  '(org-special-keyword ((t (:foreground "#52676f"))))
- '(org-todo ((t (:background "#c60007" :foreground "#042028" 
-			     :inverse-video t :underline nil 
-			     :slant normal :weight bold)))))
- '(org-level-1 ((t (:foreground "#bd3612"))))
- '(org-level-2 ((t (:foreground "#259185"))))
- '(org-level-3 ((t (:foreground "#2075c7"))))
- '(org-level-4 ((t (:foreground "#728a05"))))
+ '(org-todo ((t (:background "#c60007" :foreground "#042028" :inverse-video t 
+			     :underline nil :slant normal :weight bold))))
+ '(org-level-1 ((t (:foreground "#b58900"))))
+ '(org-level-2 ((t (:foreground "#cb4b16"))))
+ '(org-level-3 ((t (:foreground "#dc322f"))))
+ '(org-level-4 ((t (:foreground "#d33682"))))
+ '(org-level-5 ((t (:foreground "#6c71c4"))))
+ '(org-level-6 ((t (:foreground "#268bd2"))))
+ '(org-level-7 ((t (:foreground "#2aa198"))))
+ '(org-level-8 ((t (:foreground "#859900")))))
  ;------end variables set by Customize------;
 
