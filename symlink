@@ -1,0 +1,6 @@
+ #!/bin/bash
+#symlinks the home directory .emacs and .emacs.d to the ones in emacs-config
+#only required for initial setup 
+
+ln -s ~/emacs-config/.emacs/ ~/.emacs
+ln -s ~/emacs-config/.emacs.d/ ~.emacs.d
