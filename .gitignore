@@ -1,0 +1,4 @@
+#gitignore file
+
+#ignore everything in auto-save-list dir
+.emacs.d/auto-save-list/*
