@@ -19,6 +19,7 @@
 
 ;------other custom-set variables------;
 (setq make-backup-files nil)
+(fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 ;------end other custom-set variables------;
 
 ;------package and repository management------;
