@@ -41,9 +41,6 @@
 (load-theme 'solarized-dark t)
 ;------end custom theme management------;
 
-
-
-
 ;; variables and faces that were custom set in emacs
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
