@@ -48,7 +48,7 @@
  '(org-src-fontify-natively t)
  '(org-startup-indented t))
 (custom-set-faces
- '(org-date ((t (:foreground "#a57705" :underline t))))
+ '(org-date ((t (:foreground "#839496"))))
  '(org-hide ((t (:foreground "#073642"))))
  '(org-special-keyword ((t (:foreground "#52676f"))))
  '(org-todo ((t (:background "#c60007" :foreground "#042028" :inverse-video t 
