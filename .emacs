@@ -55,7 +55,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-date ((t (:foreground "#a57705" :underline t))))
- '(org-hide ((t (:foreground "#0a2832"))))
+ '(org-hide ((t (:foreground "#073642"))))
  '(org-level-1 ((t (:foreground "#bd3612"))))
  '(org-level-2 ((t (:foreground "#259185"))))
  '(org-level-3 ((t (:foreground "#2075c7"))))
