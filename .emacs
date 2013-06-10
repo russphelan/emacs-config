@@ -15,6 +15,7 @@
 
 ;------custom faces------;
 (set-face-attribute 'default nil :font "Anonymous Pro 12")
+(set-background-color "#002b36") ;make sure background color is right
 ;------end custom faces------;
 
 ;------other custom-set variables------;
