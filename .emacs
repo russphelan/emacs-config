@@ -52,5 +52,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(org-date ((t (:foreground "#a57705" :underline t))))
+ '(org-level-1 ((t (:foreground "#bd3612"))))
+ '(org-level-2 ((t (:foreground "#259185"))))
+ '(org-level-3 ((t (:foreground "#2075c7"))))
+ '(org-level-4 ((t (:foreground "#728a05"))))
+ '(org-special-keyword ((t (:foreground "#52676f")))) ;closed keywords
+ '(org-todo ((t (:background "#c60007" :foreground "#042028" :inverse-video t :underline nil :slant normal :weight bold))))) ;red TODO keywords
 
