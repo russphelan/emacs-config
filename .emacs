@@ -36,6 +36,10 @@
 (dolist (p my-packages)
     (when (not (package-installed-p p))
       (package-install p)))
+
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)  
+(evil-mode 1)
 ;------end package and repository management------;
 
 ;------custom theme management------;
