@@ -3,7 +3,8 @@
   (progn 
       (tool-bar-mode -1)
       (scroll-bar-mode 0)
-      (set-fringe-mode 0))
+      (set-fringe-mode 0)
+      (set-face-attribute 'default nil :font "Anonymous Pro 12"))
   (progn
       (menu-bar-mode -1)
       (set-fringe-mode 0)))
@@ -14,7 +15,6 @@
 ;------end custom keybinds------;
 
 ;------custom faces------;
-(set-face-attribute 'default nil :font "Anonymous Pro 12")
 (set-background-color "#002b36") ;make sure background color is right
 ;------end custom faces------;
 
