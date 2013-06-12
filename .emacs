@@ -12,7 +12,6 @@
 
 ;------custom keybinds------;
 (setq mac-command-modifier 'control)
-4
 ;------end custom keybinds------;
 
 ;------custom faces------;
@@ -141,4 +140,3 @@
  '(org-todo ((t (:background "#c60007" :foreground "#042028"
 		 :inverse-video t :underline nil :slant normal :weight bold))) t))
  ;------end variables set by Customize------;
-
