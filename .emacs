@@ -1,5 +1,5 @@
 ;------window system switch------;
-(if window-system
+(if (window-system)
   (progn 
       (tool-bar-mode -1)
       (scroll-bar-mode 0)
@@ -8,8 +8,31 @@
       (set-background-color "#002b36")) ;make sure background color is right
   (progn
     (menu-bar-mode -1)))
-     
 ;------end window system switch------;
+
+;------package and repository management------;
+(require 'package)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(package-initialize)
+
+(defvar my-packages '(color-theme-solarized)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+    (when (not (package-installed-p p))
+      (package-install p)))
+
+(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.0.3")
+(add-to-list 'load-path "~/.emacs.d/elpa/ace-jump-mode-20121104.1157")
+(load "~/.emacs.d/elpa/evil-1.0.3/evil-maps.el")
+
+(require 'evil)
+(evil-mode 1)
+(require 'ace-jump-mode)
+(require 'cl) ;needed to make ace-jump-mode work
+;------end package and repository management------;
 
 ;------custom keybinds------;
 (setq mac-command-modifier 'control) ;if on a Mac, changes Command to Control
@@ -40,30 +63,6 @@
 (setq make-backup-files 'nil) ;keep emacs from generating backup files
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 ;------end other custom-set variables------;
-
-;------package and repository management------;
-(require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-initialize)
-
-(defvar my-packages '(color-theme-solarized)
-  "A list of packages to ensure are installed at launch.")
-
-(dolist (p my-packages)
-    (when (not (package-installed-p p))
-      (package-install p)))
-
-(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.0.3")
-(add-to-list 'load-path "~/.emacs.d/elpa/ace-jump-mode-20121104.1157")
-(load "~/.emacs.d/elpa/evil-1.0.3/evil-maps.el")
-
-(require 'evil)
-(evil-mode 1)
-(require 'ace-jump-mode)
-(require 'cl) ;needed to make ace-jump-mode work
-;------end package and repository management------;
 
 ;------ace jump mode config------;
 (defmacro evil-enclose-ace-jump (&rest body)
