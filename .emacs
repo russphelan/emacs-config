@@ -4,19 +4,18 @@
       (tool-bar-mode -1)
       (scroll-bar-mode 0)
       (set-fringe-mode 0)
-      (set-face-attribute 'default nil :font "Anonymous Pro 12"))
+      (set-face-attribute 'default nil :font "Anonymous Pro 12")
+      (set-background-color "#002b36")) ;make sure background color is right
   (progn
-      (menu-bar-mode -1)
-      (set-fringe-mode 0)))
+    (menu-bar-mode -1)))
+     
 ;------end window system switch------;
 
 ;------custom keybinds------;
-(setq mac-command-modifier 'control)
+(setq mac-command-modifier 'control) ;if on a Mac, changes Command to Control
+				     ;Command is intended to be changes with
+				     ;Caps Lock outside of Emacs. 
 ;------end custom keybinds------;
-
-;------custom faces------;
-(set-background-color "#002b36") ;make sure background color is right
-;------end custom faces------;
 
 ;------other custom-set variables------;
 (setq make-backup-files 'nil) ;keep emacs from generating backup files
@@ -39,9 +38,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/elpa/evil-1.0.3")
 (add-to-list 'load-path "~/.emacs.d/elpa/ace-jump-mode-20121104.1157")
-(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.0.3/evil-maps.el")
+(load "~/.emacs.d/elpa/evil-1.0.3/evil-maps.el")
+
 (require 'evil)
-(require 'evil-maps)
 (evil-mode 1)
 (require 'ace-jump-mode)
 (require 'cl) ;needed to make ace-jump-mode work
