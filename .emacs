@@ -142,10 +142,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(minibuffer-prompt ((t (:foreground "#2075c7" :inverse-video nil
-			  :underline nil :slant normal :weight bold)))) ;makes M-x prompt blue 
+ '(minibuffer-prompt ((t (:foreground "#2075c7" :inverse-video nil :underline nil :slant normal :weight bold))))
  '(org-date ((t (:foreground "#839496"))))
- '(org-hide ((t (:foreground "#073642"))) t)
+ '(org-hide ((t (:foreground "#073642"))))
  '(org-level-1 ((t (:foreground "#b58900"))))
  '(org-level-2 ((t (:foreground "#cb4b16"))))
  '(org-level-3 ((t (:foreground "#dc322f"))))
@@ -154,7 +153,6 @@
  '(org-level-6 ((t (:foreground "#268bd2"))))
  '(org-level-7 ((t (:foreground "#2aa198"))))
  '(org-level-8 ((t (:foreground "#859900"))))
- '(org-special-keyword ((t (:foreground "#52676f")))) ;keyword for CLOSED, etc. 
- '(org-todo ((t (:background "#c60007" :foreground "#042028"
-		 :inverse-video t :underline nil :slant normal :weight bold))) t))
+ '(org-special-keyword ((t (:foreground "#52676f"))))
+ '(org-todo ((t (:background "#c60007" :foreground "#042028" :inverse-video t :underline nil :slant normal :weight bold)))))
  ;------end variables set by Customize------;
