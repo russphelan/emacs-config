@@ -24,9 +24,9 @@
     (when (not (package-installed-p p))
       (package-install p)))
 
-(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.0.3")
-(add-to-list 'load-path "~/.emacs.d/elpa/ace-jump-mode-20121104.1157")
-(load "~/.emacs.d/elpa/evil-1.0.3/evil-maps.el")
+;load lisp from any subdirectories of .emacs.d
+(let ((default-directory "~/.emacs.d/"))
+      (normal-top-level-add-subdirs-to-load-path))
 
 (require 'evil)
 (evil-mode 1)
