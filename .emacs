@@ -32,6 +32,10 @@
 (evil-mode 1)
 (require 'ace-jump-mode)
 (require 'cl) ;needed to make ace-jump-mode work
+
+(require 'elisp-slime-nav)
+(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+  (add-hook hook 'elisp-slime-nav-mode))
 ;------end package and repository management------;
 
 ;------custom keybinds------;
