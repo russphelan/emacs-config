@@ -5,7 +5,6 @@
       (scroll-bar-mode 0)
       (set-fringe-mode 0)
       (set-face-attribute 'default nil :font "Anonymous Pro 12")
-      (set-background-color "#002b36")) ;make sure background color is right
   (progn
     (menu-bar-mode -1)))
 ;------end window system switch------;
@@ -149,7 +148,7 @@
  '(minibuffer-prompt ((t (:foreground "#2075c7" :inverse-video nil :underline nil :slant normal :weight bold))))
  '(org-date ((t (:foreground "#839496"))))
  '(org-hide ((t (:foreground "#073642"))))
- '(org-level-1 ((t (:foreground "#b58900"))))
+ '(org-level-1 ((t (:foreground "#b58900" :height 140))))
  '(org-level-2 ((t (:foreground "#cb4b16"))))
  '(org-level-3 ((t (:foreground "#dc322f"))))
  '(org-level-4 ((t (:foreground "#d33682"))))
