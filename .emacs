@@ -6,7 +6,7 @@
       (set-fringe-mode 0)
       (set-face-attribute 'default nil :font "Anonymous Pro 12")
   (progn
-    (menu-bar-mode -1)))
+    (menu-bar-mode -1))))
 ;------end window system switch------;
 
 ;------package and repository management------;
