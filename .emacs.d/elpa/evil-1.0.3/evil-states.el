@@ -37,6 +37,7 @@ AKA \"Command\" state."
   :tag " <N> "
   :enable (motion)
   :exit-hook (evil-repeat-start-hook)
+  :cursor ("#dc322f" box)
   (cond
    ((evil-normal-state-p)
     (add-hook 'post-command-hook #'evil-normal-post-command nil t))
@@ -72,7 +73,7 @@ If the region is activated, enter Visual state."
 (evil-define-state insert
   "Insert state."
   :tag " <I> "
-  :cursor (bar . 2)
+  :cursor ("#dc322f" bar)
   :message "-- INSERT --"
   :entry-hook (evil-start-track-last-insertion)
   :exit-hook (evil-cleanup-insert-state evil-stop-track-last-insertion)
