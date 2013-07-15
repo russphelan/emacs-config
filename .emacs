@@ -131,6 +131,13 @@
 (load-theme 'solarized-dark t)
 ;------end custom theme management------;
 
+;------language binaries------;
+(setq scheme-program-name
+    "/Applications/mit-scheme.app/Contents/Resources/mit-scheme")
+
+(require 'xscheme)
+;------end language binaries------;
+
 ;------variables set by Customize------;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
