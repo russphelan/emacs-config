@@ -2,3 +2,6 @@
 
 #ignore everything in auto-save-list dir
 .emacs.d/auto-save-list/*
+
+#ignore Mac OS X finder files
+.DS_Store

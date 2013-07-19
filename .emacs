@@ -5,9 +5,8 @@
       (scroll-bar-mode 0)
       (set-fringe-mode 0)
       (set-face-attribute 'default nil :font "Anonymous Pro 12")
-      (set-background-color "#002b36")) ;make sure background color is right
   (progn
-    (menu-bar-mode -1)))
+    (menu-bar-mode -1))))
 ;------end window system switch------;
 
 ;------package and repository management------;
@@ -32,6 +31,10 @@
 (evil-mode 1)
 (require 'ace-jump-mode)
 (require 'cl) ;needed to make ace-jump-mode work
+
+(require 'elisp-slime-nav)
+(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+  (add-hook hook 'elisp-slime-nav-mode))
 ;------end package and repository management------;
 
 ;------custom keybinds------;
@@ -128,6 +131,13 @@
 (load-theme 'solarized-dark t)
 ;------end custom theme management------;
 
+;------language binaries------;
+(setq scheme-program-name
+    "/Applications/mit-scheme.app/Contents/Resources/mit-scheme")
+
+(require 'xscheme)
+;------end language binaries------;
+
 ;------variables set by Customize------;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -145,7 +155,7 @@
  '(minibuffer-prompt ((t (:foreground "#2075c7" :inverse-video nil :underline nil :slant normal :weight bold))))
  '(org-date ((t (:foreground "#839496"))))
  '(org-hide ((t (:foreground "#073642"))))
- '(org-level-1 ((t (:foreground "#b58900"))))
+ '(org-level-1 ((t (:foreground "#b58900" :height 140))))
  '(org-level-2 ((t (:foreground "#cb4b16"))))
  '(org-level-3 ((t (:foreground "#dc322f"))))
  '(org-level-4 ((t (:foreground "#d33682"))))
