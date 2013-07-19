@@ -1,12 +1,12 @@
 ;------window system switch------;
-(if (window-system)
-  (progn 
+(if (display-graphic-p)
+    (progn
       (tool-bar-mode -1)
       (scroll-bar-mode 0)
       (set-fringe-mode 0)
       (set-face-attribute 'default nil :font "Anonymous Pro 12")
-  (progn
-    (menu-bar-mode -1))))
+     (progn
+      (menu-bar-mode -1))))
 ;------end window system switch------;
 
 ;------package and repository management------;
