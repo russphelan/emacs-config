@@ -91,8 +91,8 @@
 (define-key evil-normal-state-map [escape] 'evil-force-normal-state)
 (define-key evil-normal-state-map [remap cua-paste-pop] 'evil-paste-pop)
 (define-key evil-normal-state-map [remap yank-pop] 'evil-paste-pop)
-(define-key evil-normal-state-map "." 'evil-scroll-page-down)
-(define-key evil-normal-state-map "," 'evil-scroll-page-up)
+(define-key evil-normal-state-map "," 'evil-scroll-page-down)
+(define-key evil-normal-state-map "." 'evil-scroll-page-up)
 
 ;; go to last change
 (define-key evil-normal-state-map "g;" 'goto-last-change)
