@@ -26,7 +26,7 @@
 ;load lisp from any subdirectories of .emacs.d
 (let ((default-directory "~/.emacs.d/"))
       (normal-top-level-add-subdirs-to-load-path))
-
+(require 'yasnippet)
 (require 'ace-jump-mode)
 (require 'cl) ;needed to make ace-jump-mode work
 
@@ -44,6 +44,7 @@
 ;------other custom-set variables------;
 (setq make-backup-files 'nil) ;keep emacs from generating backup files
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
+(yas-global-mode 1)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
