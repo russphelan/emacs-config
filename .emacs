@@ -28,6 +28,7 @@
       (normal-top-level-add-subdirs-to-load-path))
 (require 'yasnippet)
 (require 'ace-jump-mode)
+(require 'magit)
 (require 'cl) ;needed to make ace-jump-mode work
 
 (require 'elisp-slime-nav)
@@ -39,12 +40,14 @@
 (setq mac-command-modifier 'control) ;if on a Mac, changes Command to Control
 				     ;Command is intended to be changes with
 				     ;Caps Lock outside of Emacs.
+(define-key global-map "\C-cc" 'org-capture) ;assigning a global key for org-capture
 ;------end custom keybinds------;
 
 ;------other custom-set variables------;
 (setq make-backup-files 'nil) ;keep emacs from generating backup files
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 (yas-global-mode 1)
+(setq next-line-add-newlines t)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
@@ -66,7 +69,7 @@
  ;; If there is more than one, they won't work right.
  '(org-log-done (quote note))
  '(org-src-fontify-natively t)
- '(org-startup-indented t))
+ '(Org-startup-indented t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -74,7 +77,6 @@
  ;; If there is more than one, they won't work right.
  '(minibuffer-prompt ((t (:foreground "#2075c7" :inverse-video nil :underline nil :slant normal :weight bold))))
  '(org-date ((t (:foreground "#839496"))) t)
- '(org-hide ((t (:foreground "#073642"))) t)
  '(org-level-1 ((t (:foreground "#b58900" :height 140))) t)
  '(org-level-2 ((t (:foreground "#cb4b16"))) t)
  '(org-level-3 ((t (:foreground "#dc322f"))) t)
