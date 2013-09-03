@@ -48,6 +48,7 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 (yas-global-mode 1)
 (setq next-line-add-newlines t)
+(setq js-indent-level 8)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
