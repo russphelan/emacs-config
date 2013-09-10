@@ -48,6 +48,8 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 (yas-global-mode 1)
 (setq next-line-add-newlines t)
+(setq yas/root-directory "/Users/russphelan/emacs-config/.emacs.d/elpa/yasnippet/snippets")
+(yas/load-directory yas/root-directory)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
