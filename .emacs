@@ -51,6 +51,8 @@
 (setq yas/root-directory "/Users/russphelan/emacs-config/.emacs.d/elpa/yasnippet/snippets")
 (yas/load-directory yas/root-directory)
 (setq js-indent-level 8)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(set-default 'truncate-lines t)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
