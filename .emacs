@@ -16,8 +16,8 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-(defvar my-packages '(color-theme-solarized)
-  "A list of packages to ensure are installed at launch.")
+;(defvar my-packages '(color-theme-solarized)
+ ; "A list of packages to ensure are installed at launch.")
 
 ;;(dolist (p my-packages)
 ;;    (when (not (package-installed-p p))
@@ -30,7 +30,7 @@
 (require 'ace-jump-mode)
 (require 'magit)
 (require 'cl) ;needed to make ace-jump-mode work
-(require 'color-theme-solarized)
+;(require 'color-theme-solarized)
 
 (require 'elisp-slime-nav)
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
