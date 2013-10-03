@@ -16,12 +16,12 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-(defvar my-packages '(color-theme-solarized)
-  "A list of packages to ensure are installed at launch.")
+;;(defvar my-packages '(color-theme-solarized)
+;;  "A list of packages to ensure are installed at launch.")
 
-(dolist (p my-packages)
-    (when (not (package-installed-p p))
-      (package-install p)))
+;;(dolist (p my-packages)
+;;    (when (not (package-installed-p p))
+;;      (package-install p)))
 
 ;load lisp from any subdirectories of .emacs.d
 (let ((default-directory "~/.emacs.d/"))
@@ -30,17 +30,23 @@
 (require 'ace-jump-mode)
 (require 'magit)
 (require 'cl) ;needed to make ace-jump-mode work
+(require 'color-theme-solarized)
 
 (require 'elisp-slime-nav)
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
   (add-hook hook 'elisp-slime-nav-mode))
 ;------end package and repository management------;
 
+;------hooks------;
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;------end hooks------;
+
 ;------custom keybinds------;
 (setq mac-command-modifier 'control) ;if on a Mac, changes Command to Control
 				     ;Command is intended to be changes with
 				     ;Caps Lock outside of Emacs.
 (define-key global-map "\C-cc" 'org-capture) ;assigning a global key for org-capture
+(global-set-key(kbd "C-x C-x") 'set-mark-command)
 ;------end custom keybinds------;
 
 ;------other custom-set variables------;
@@ -49,10 +55,12 @@
 (yas-global-mode 1)
 (setq next-line-add-newlines t)
 (setq js-indent-level 8)
+(setq solarized-broken-srgb 'nil)
+(set-default 'truncate-lines t)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
-(load-theme 'solarized-dark t)
+;;(load-theme 'solarized-dark t)
 ;------end custom theme management------;
 
 ;------language binaries------;
@@ -62,15 +70,16 @@
 (require 'xscheme)
 ;------end language binaries------;
 
-;------variables set by Customize------;
+ ;------variables set by Customize------;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(Org-startup-indented t)
+ '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(org-log-done (quote note))
- '(org-src-fontify-natively t)
- '(Org-startup-indented t))
+ '(org-src-fontify-natively t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
