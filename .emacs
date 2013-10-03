@@ -16,8 +16,8 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-;;(defvar my-packages '(color-theme-solarized)
-;;  "A list of packages to ensure are installed at launch.")
+(defvar my-packages '(color-theme-solarized)
+  "A list of packages to ensure are installed at launch.")
 
 ;;(dolist (p my-packages)
 ;;    (when (not (package-installed-p p))
@@ -54,8 +54,10 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 (yas-global-mode 1)
 (setq next-line-add-newlines t)
+(setq yas/root-directory "/Users/russphelan/emacs-config/.emacs.d/elpa/yasnippet/snippets")
+(yas/load-directory yas/root-directory)
 (setq js-indent-level 8)
-(setq solarized-broken-srgb 'nil)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
 (set-default 'truncate-lines t)
 ;------end other custom-set variables------;
 

@@ -1,0 +1,10 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("mGameLevel set"
+ (filename . "~/Documents/SRRI/TP-data-games/Flash/InferenceGames/src/InferenceGames.mxml")
+ (front-context-string . "	mGameLevel = 1;")
+ (rear-context-string . "= true;\n				\n			")
+ (position . 9791))
+)
