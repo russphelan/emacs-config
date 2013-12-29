@@ -4,7 +4,7 @@
       (tool-bar-mode -1)
       (scroll-bar-mode 0)
       (set-fringe-mode 0)
-      (set-face-attribute 'default nil :font "Anonymous Pro 14"))
+      (set-face-attribute 'default nil :font "Anonymous Pro 12"))
      (progn
       (menu-bar-mode -1)))
 ;------end window system switch------;
@@ -16,20 +16,20 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-;(defvar my-packages '(color-theme-solarized)
- ; "A list of packages to ensure are installed at launch.")
+;; (defvar my-packages '(color-theme-solarized)
+;;  "A list of packages to ensure are installed at launch.")
 
-;;(dolist (p my-packages)
-;;    (when (not (package-installed-p p))
-;;      (package-install p)))
+;; (dolist (p my-packages)
+;;     (when (not (package-installed-p p))
+;;       (package-install p)))
 
-;load lisp from any subdirectories of .emacs.d
-(let ((default-directory "~/.emacs.d/"))
-      (normal-top-level-add-subdirs-to-load-path))
-(require 'yasnippet)
+(let ((default-directory "~/emacs-config/.emacs.d"))
+  (normal-top-level-add-subdirs-to-load-path))
+
+;(require 'yasnippet)
 (require 'ace-jump-mode)
 (require 'magit)
-(require 'cl) ;needed to make ace-jump-mode work
+(require 'cl) ;nee ded to make ace-jump-mode work
 ;(require 'color-theme-solarized)
 
 (require 'elisp-slime-nav)
@@ -52,10 +52,10 @@
 ;------other custom-set variables------;
 (setq make-backup-files 'nil) ;keep emacs from generating backup files
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
-(yas-global-mode 1)
+;(yas-global-mode 1)
 (setq next-line-add-newlines t)
-(setq yas/root-directory "/Users/russphelan/emacs-config/.emacs.d/elpa/yasnippet/snippets")
-(yas/load-directory yas/root-directory)
+;(setq yas/root-directory "/Users/russphelan/emacs-config/.emacs.d/elpa/yasnippet/snippets")
+;(yas/load-directory yas/root-directory)
 (setq js-indent-level 8)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (set-default 'truncate-lines t)
