@@ -26,11 +26,9 @@
 (let ((default-directory "~/emacs-config/.emacs.d"))
   (normal-top-level-add-subdirs-to-load-path))
 
-;(require 'yasnippet)
 (require 'ace-jump-mode)
 (require 'magit)
-(require 'cl) ;nee ded to make ace-jump-mode work
-;(require 'color-theme-solarized)
+(require 'cl) ;needed to make ace-jump-mode work
 
 (require 'elisp-slime-nav)
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
@@ -47,22 +45,20 @@
 				     ;Caps Lock outside of Emacs.
 (define-key global-map "\C-cc" 'org-capture) ;assigning a global key for org-capture
 (global-set-key(kbd "C-x C-x") 'set-mark-command)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-char-mode)
 ;------end custom keybinds------;
 
 ;------other custom-set variables------;
 (setq make-backup-files 'nil) ;keep emacs from generating backup files
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
-;(yas-global-mode 1)
 (setq next-line-add-newlines t)
-;(setq yas/root-directory "/Users/russphelan/emacs-config/.emacs.d/elpa/yasnippet/snippets")
-;(yas/load-directory yas/root-directory)
 (setq js-indent-level 8)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (set-default 'truncate-lines t)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
-;;(load-theme 'solarized-dark t)
+(load-theme 'solarized-dark t)
 ;------end custom theme management------;
 
 ;------language binaries------;
