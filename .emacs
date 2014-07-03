@@ -1,38 +1,26 @@
 ;------window system switch------;
+;window-system is true for anything that isn't a character-only terminal
 (if (window-system)
     (progn
       (tool-bar-mode -1)
       (scroll-bar-mode 0)
       (set-fringe-mode 0)
-      (set-face-attribute 'default nil :font "Anonymous Pro 12"))
+      (set-face-attribute 'default nil :font "Anonymous Pro 14"))
      (progn
       (menu-bar-mode -1)))
 ;------end window system switch------;
 
 ;------package and repository management------;
 (require 'package)
+
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-;; (defvar my-packages '(color-theme-solarized)
-;;  "A list of packages to ensure are installed at launch.")
-
-;; (dolist (p my-packages)
-;;     (when (not (package-installed-p p))
-;;       (package-install p)))
-
-(let ((default-directory "~/emacs-config/.emacs.d"))
+;temporarily changes the current directory to "~/.emacs.d/, then loads subdirs into loadpath
+(let ((default-directory "~/.emacs.d/"))
   (normal-top-level-add-subdirs-to-load-path))
-
-(require 'ace-jump-mode)
-(require 'magit)
-(require 'cl) ;needed to make ace-jump-mode work
-
-(require 'elisp-slime-nav)
-(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
-  (add-hook hook 'elisp-slime-nav-mode))
 ;------end package and repository management------;
 
 ;------hooks------;
@@ -43,9 +31,7 @@
 (setq mac-command-modifier 'control) ;if on a Mac, changes Command to Control
 				     ;Command is intended to be changes with
 				     ;Caps Lock outside of Emacs.
-(define-key global-map "\C-cc" 'org-capture) ;assigning a global key for org-capture
 (global-set-key(kbd "C-x C-x") 'set-mark-command)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-char-mode)
 ;------end custom keybinds------;
 
 ;------other custom-set variables------;
@@ -53,11 +39,16 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;shorten yes-or-no prompts
 (setq next-line-add-newlines t)
 (setq js-indent-level 8)
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
 (set-default 'truncate-lines t)
+(setq ns-use-srgb-colorspace t)
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
+;creates list of directories where installed themes are stored
+(setq theme-dir-list '("~/.emacs.d/git-packages/emacs-color-theme-solarized/"))
+(setq custom-theme-load-path (append custom-theme-load-path theme-dir-list))
+
+;loads for custom themes
 (load-theme 'solarized-dark t)
 ;------end custom theme management------;
 

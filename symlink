@@ -4,4 +4,4 @@
 
 cd ~
 ln -s ~/emacs-config/.emacs .emacs
-ln -s ~/emacs-config/.emacs.d .emacs.d
+ln -s ~/emacs-config/.emacs.d/ .emacs.d
