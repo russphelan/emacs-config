@@ -1,15 +1,3 @@
-;------window system switch------;
-;window-system is true for anything that isn't a character-only terminal
-(if (window-system)
-    (progn
-      (tool-bar-mode -1)
-      (scroll-bar-mode 0)
-      (set-fringe-mode 0)
-      (set-face-attribute 'default nil :font "Anonymous Pro 14"))
-     (progn
-      (menu-bar-mode -1)))
-;------end window system switch------;
-
 ;------package and repository management------;
 (require 'package)
 
@@ -23,8 +11,25 @@
   (normal-top-level-add-subdirs-to-load-path))
 ;------end package and repository management------;
 
+;------window system switch------;
+;window-system is true for anything that isn't a character-only terminal
+(if (window-system)
+    (progn
+      (tool-bar-mode -1)
+      (scroll-bar-mode 0)
+      (set-fringe-mode 0)
+      (set-face-attribute 'default nil :font "Anonymous Pro 14")
+      (exec-path-from-shell-initialize))
+     (progn
+      (menu-bar-mode -1)))
+;------end window system switch------;
+
+
+
 ;------hooks------;
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;------end hooks------;
 
 ;------custom keybinds------;
@@ -32,7 +37,7 @@
 				     ;Command is intended to be changes with
 				     ;Caps Lock outside of Emacs.
 (global-set-key(kbd "C-x C-x") 'set-mark-command)
-;------end custom keybinds------;
+;------end custom keybinds------;p
 
 ;------other custom-set variables------;
 (setq make-backup-files 'nil) ;keep emacs from generating backup files
@@ -41,6 +46,7 @@
 (setq js-indent-level 8)
 (set-default 'truncate-lines t)
 (setq ns-use-srgb-colorspace t)
+(setq linum-format "%d ")
 ;------end other custom-set variables------;
 
 ;------custom theme management------;
