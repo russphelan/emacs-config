@@ -18,8 +18,7 @@
       (tool-bar-mode -1)
       (scroll-bar-mode 0)
       (set-fringe-mode 0)
-      (set-face-attribute 'default nil :font "Anonymous Pro 14")
-      (exec-path-from-shell-initialize))
+      (set-face-attribute 'default nil :font "Anonymous Pro 14"))
      (progn
       (menu-bar-mode -1)))
 ;------end window system switch------;
